@@ -10,7 +10,7 @@ const app = express();
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); 
 
-const allowedOrigins = ['http://localhost:3000', 'http://192.168.0.146:3000'];
+const allowedOrigins = ['http://localhost:3000', 'https://simachewd.github.io/my-portifolio-frontend/'];
 
 app.use(cors({
     origin: allowedOrigins,

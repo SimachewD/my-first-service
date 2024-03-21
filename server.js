@@ -12,10 +12,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const allowedOrigins = ['http://localhost:3000', 'https://simachewd.github.io/my-portifolio-frontend/'];
 
-app.use(cors({
-    origin: allowedOrigins,
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}));
+app.use(cors());
 
 mongoose.connect(process.env.MONGO_URI).then((conn)=>{
 
